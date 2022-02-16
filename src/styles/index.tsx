@@ -43,3 +43,27 @@ export const Container = styled.div`
 export const GuildIcon = styled.img`
       border-radius: 50%;
 `;
+
+export const AppBarStyle = styled.header`
+      display: flex;
+      align-items: center;
+      padding: 15px 35px;
+      box-sizing: border-box;
+      border-bottom: 1px solid #ffffff22;
+      justify-content: space-between;
+`;
+
+export const Title = styled.p`
+      font-size: 22px;
+`;
+
+type FlexProps = Partial <{
+      alignItems: string;
+      justfiyContent: string;
+      flexDirection: string;
+}>
+
+export const Flex = styled.div`
+      display: flex;
+
+`;
