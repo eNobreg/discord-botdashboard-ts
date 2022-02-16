@@ -10,7 +10,13 @@ export const MainButton = styled.div`
 	border-radius: 5px;
 	border: 1px solid #5858586a;
 	margin: 12px 0;
-	box-shadow: 0px 1px 5px 0px #08080853;
+	box-shadow: 0px 1px 3px 0px #08080853;
+`;
+
+export const TextButton = styled(MainButton)`
+	padding: 18px 28px;
+	width: 100%;
+	background-color: #272727;
 `;
 
 export const HomePageStyling = styled.div`
@@ -66,5 +72,11 @@ export const Flex = styled.div<FlexProps>`
       display: flex;
       align-items: ${({ alignItems }) => alignItems};
       justify-content: ${({ justfiyContent }) => justfiyContent};
+      flex-direction: ${({ flexDirection }) => flexDirection};
+`;
 
+export const Grid = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 10px;
 `;
