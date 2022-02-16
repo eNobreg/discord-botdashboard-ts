@@ -2,6 +2,7 @@ import { useContext } from "react"
 import { Container, Title } from "../styles";
 import { GuildContext } from '../utils/contexts/GuildContext';
 import { IoSettingsOutline } from 'react-icons/io5'
+import { Flex } from "../styles"
 
 export const CategoryPage = () => {
 
@@ -10,10 +11,10 @@ export const CategoryPage = () => {
 	<div style={{padding: '50px 0'}}>
 		<Container>
 			<div>
-				<div>
+				<Flex alignItems="center">
 					<Title>Basic Configurations</Title>
 					<IoSettingsOutline size={40} />
-				</div>
+				</Flex>
 			</div>
 		</Container>
 	</div>

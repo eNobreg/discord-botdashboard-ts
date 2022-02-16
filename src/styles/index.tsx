@@ -62,8 +62,9 @@ type FlexProps = Partial <{
       justfiyContent: string;
       flexDirection: string;
 }>
-
-export const Flex = styled.div`
+export const Flex = styled.div<FlexProps>`
       display: flex;
+      align-items: ${({ alignItems }) => alignItems};
+      justify-content: ${({ justfiyContent }) => justfiyContent};
 
 `;
