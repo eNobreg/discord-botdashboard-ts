@@ -3,7 +3,7 @@ import { mockGuilds } from '../___placeholders___/guillds';
 import { useContext } from 'react';
 import { GuildContext } from '../utils/contexts/GuildContext';
 import { GuildMenuItem } from '../components/GuildMenuItem';
-import { Container } from '../styles';
+import { Container, Page } from '../styles';
 
 
 
@@ -18,15 +18,7 @@ const handleClick = (guildId: string) => {
 }
 
 return (
-<div style={{ padding: '50px' }}>
-{/* 	<ul>
-		{mockGuilds.map((guild) => (
-		<li onClick={() => {
-			updateGuildId(guild.id);
-			navigate('/categories');
-		}}>{guild.name}</li>
-		))}
-	</ul> */}
+<Page>
 	<Container>
 		<h2 style={{ fontWeight: 300 }}>Select a Server</h2>
 		<div>
@@ -37,6 +29,6 @@ return (
 			))}
 		</div>
 	</Container>
-</div>
+</Page>
 );
 };

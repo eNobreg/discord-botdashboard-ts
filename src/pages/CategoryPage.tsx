@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { Container, TextButton, Title } from "../styles";
+import { Container, Page, TextButton, Title } from "../styles";
 import { GuildContext } from '../utils/contexts/GuildContext';
 import { IoSettingsOutline, IoNewspaper } from 'react-icons/io5'
 import { Flex } from "../styles"
@@ -13,7 +13,7 @@ export const CategoryPage = () => {
 
 
 	return (
-	<div style={{padding: '50px 0'}}>
+	<Page>
 		<Container>
 			<div>
 				<Flex alignItems="center" justfiyContent="space-between">
@@ -39,6 +39,6 @@ export const CategoryPage = () => {
 				</Grid>
 			</div>
 		</Container>
-	</div>
+	</Page>
 	)
 }
