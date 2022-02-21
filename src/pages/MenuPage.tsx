@@ -1,4 +1,4 @@
-import { Navigate, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import { mockGuilds } from '../___placeholders___/guillds';
 import { useContext } from 'react';
 import { GuildContext } from '../utils/contexts/GuildContext';
