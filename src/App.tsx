@@ -8,15 +8,19 @@ import { WelcomeMessagePage } from "./pages/WelcomeMessagePage";
 import { GuildContext } from "./utils/contexts/GuildContext";
 import { AppBar } from "./components/appBar";
 import { useFetchUser } from './utils/hooks/useFetchUser';
+import { Spinner } from './components/spinner';
+import { ClimbingBoxLoader } from "react-spinners";
 
 function App() {
   const [guildId, setGuildId] = useState("");
   const {user, loading, error} = useFetchUser();
   const updateGuildId = (id: string) => setGuildId(id);
 
+  if (loading) return <Spinner children={<ClimbingBoxLoader color="white" size="15"/>}/>;
+
   return (
     <GuildContext.Provider value={{ guildId, updateGuildId }}>
-      {user ? (
+      {user && !error ? (
         <>
           <Routes>
             <Route path="/dashboard/*" element={<AppBar />} />
@@ -33,7 +37,7 @@ function App() {
       ) : (
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          
+          <Route path="*" element={<div> Not Found </div>} />
         </Routes>
       )}
     </GuildContext.Provider>

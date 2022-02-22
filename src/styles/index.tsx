@@ -42,7 +42,7 @@ export const GuildMenuStyle = styled.div`
 `;
 
 export const Container = styled.div`
-      width: 1200px;
+      max-width: 1200px;
       margin: 0 auto;
 `;
 
@@ -157,3 +157,15 @@ export const Select = styled.select`
 		background-color: #292929;
 	}
 `; 
+
+export const Overlay = styled.div`
+    height: 100%;
+    width: 100%;
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+`;
