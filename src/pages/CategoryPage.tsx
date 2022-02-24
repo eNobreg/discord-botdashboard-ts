@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 
 export const CategoryPage = () => {
 
-	const { guildId } = useContext(GuildContext)
+	const { guild } = useContext(GuildContext)
 	const navigate = useNavigate();
 
 

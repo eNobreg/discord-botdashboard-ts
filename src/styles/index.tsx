@@ -67,12 +67,15 @@ type FlexProps = Partial <{
       alignItems: string;
       justfiyContent: string;
       flexDirection: string;
+      verticalAlgin: string;
 }>
 export const Flex = styled.div<FlexProps>`
       display: flex;
       align-items: ${({ alignItems }) => alignItems};
       justify-content: ${({ justfiyContent }) => justfiyContent};
       flex-direction: ${({ flexDirection }) => flexDirection};
+      vertical-align: ${({ verticalAlgin }) => verticalAlgin};
+
 `;
 
 export const Grid = styled.div`

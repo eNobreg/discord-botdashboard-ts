@@ -10,16 +10,17 @@ import { AppBar } from "./components/appBar";
 import { useFetchUser } from './utils/hooks/useFetchUser';
 import { Spinner } from './components/spinner';
 import { ClimbingBoxLoader } from "react-spinners";
+import { PartialGuild } from './utils/types';
 
 function App() {
-  const [guildId, setGuildId] = useState("");
+  const [guild, setGuild] = useState<PartialGuild>();
   const {user, loading, error} = useFetchUser();
-  const updateGuildId = (id: string) => setGuildId(id);
+  const updateGuild = (guild: PartialGuild) => setGuild(guild);
 
-  if (loading) return <Spinner children={<ClimbingBoxLoader color="white" size="15"/>}/>;
+  if (loading) return <Spinner children={<ClimbingBoxLoader color="white" size={15}/>}/>;
 
   return (
-    <GuildContext.Provider value={{ guildId, updateGuildId }}>
+    <GuildContext.Provider value={{ guild, updateGuild }}>
       {user && !error ? (
         <>
           <Routes>
