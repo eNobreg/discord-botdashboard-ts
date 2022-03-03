@@ -11,3 +11,10 @@ export type PartialGuild =  {
     permissions: string;
     features: string[];
 }
+
+export type GuildConfigType = {
+    id: number;
+    guildId: string;
+    prefix: string;
+    welcomeChannelId: string;
+}
